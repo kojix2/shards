@@ -2,12 +2,12 @@
 .\"     Title: shard.yml
 .\"    Author: [see the "AUTHOR(S)" section]
 .\" Generator: Asciidoctor 2.0.20
-.\"      Date: 2023-12-28
+.\"      Date: 2024-12-18
 .\"    Manual: File Formats
-.\"    Source: shards 0.17.4
+.\"    Source: shards 0.19.0
 .\"  Language: English
 .\"
-.TH "SHARD.YML" "5" "2023-12-28" "shards 0.17.4" "File Formats"
+.TH "SHARD.YML" "5" "2024-12-18" "shards 0.19.0" "File Formats"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
@@ -434,10 +434,18 @@ libraries:
 .sp
 \fBlicense\fP
 .RS 4
-  An \c
-.URL "http://opensource.org/" "OSI license" ""
-name or an URL to a license file
-(string, recommended).
+An \c
+.URL "https://spdx.github.io/spdx\-spec/v3.0.1/annexes/spdx\-license\-expressions/" "SPDX license expression"
+or an URL to a license file (string, recommended).
+.sp
+The OSI publishes \c
+.URL "https://opensource.org/licenses\-old/category" "a list" ""
+of open
+source licenses and their corresponding SPDX identifiers.
+.sp
+Examples: \fIApache\-2.0\fP, \fIGPL\-3.0\-or\-later\fP, \fIApache\-2.0 OR MIT\fP,
+\fIApache\-2.0 WITH Swift\-exception\fP, \fI\c
+.URL "https://example.com/LICENSE" "" "\fP."
 .RE
 .sp
 \fBrepository\fP
@@ -524,7 +532,7 @@ A path to the source file to compile (string).
 .SH "DEPENDENCY ATTRIBUTES"
 .sp
 Each dependency needs at least one attribute that defines the resolver for this
-dependency. Those can be \fIpath\fP, \fIgit\fP, \fIgithub\fP, \fIgitlab\fP, \fIbitbucket\fP.
+dependency. Those can be \fIpath\fP, \fIgit\fP, \fIgithub\fP, \fIgitlab\fP, \fIbitbucket\fP, \fIcodeberg\fP.
 .sp
 \fBpath\fP
 .RS 4
@@ -580,6 +588,15 @@ Bitbucket repository URL as \fIuser/repo\fP (string).
 Extends the \fIgit\fP resolver, and acts exactly like it.
 .sp
 \fBExample:\fP \fIbitbucket: tom/library\fP
+.RE
+.sp
+\fBcodeberg\fP
+.RS 4
+Codeberg repository URL as \fIuser/repo\fP (string).
+.sp
+Extends the \fIgit\fP resolver, and acts exactly like it.
+.sp
+\fBExample:\fP \fIcodeberg: tom/library\fP
 .RE
 .sp
 \fBhg\fP

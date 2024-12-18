@@ -1,5 +1,122 @@
 # Changelog
 
+## [0.19.0] (2024-12-18)
+
+[0.19.0]: https://github.com/crystal-lang/shards/releases/0.19.0
+
+### Features
+
+- Forward unmodified ARGV to subcommand ([#631], thanks @luislavena)
+- Add support for Codeberg as a git resolver ([#656], thanks @miry)
+
+[#631]: https://github.com/crystal-lang/shards/pull/631
+[#656]: https://github.com/crystal-lang/shards/pull/656
+
+### Bugfixes
+
+- Fix `GitResolver#valid_repository?` ([#646], thanks @straight-shoota)
+
+[#646]: https://github.com/crystal-lang/shards/pull/646
+
+### Chores
+
+- `crystal tool format` with Crystal 1.15.0-dev ([#647], thanks @straight-shoota)
+- Replace deprecated `::sleep(Number)` ([#652], thanks @straight-shoota)
+
+[#647]: https://github.com/crystal-lang/shards/pull/647
+[#652]: https://github.com/crystal-lang/shards/pull/652
+
+### Refactor
+
+- Run `git config` instead of reading `config` file manually ([#639], thanks @straight-shoota)
+
+[#639]: https://github.com/crystal-lang/shards/pull/639
+
+### Documentation
+
+- Use SPDX license identifiers for `license` in `shard.yml` ([#641], thanks @leoheitmannruiz)
+
+[#641]: https://github.com/crystal-lang/shards/pull/641
+
+### Infrastructure
+
+- `devenv update` ([#661], thanks @straight-shoota)
+- Release 0.19.0 ([#660], thanks @straight-shoota)
+- Remove `Vagrantfile` ([#630], thanks @straight-shoota)
+- Add devenv configuration ([#629], thanks @straight-shoota)
+- Update GH Actions ([#621], thanks @renovate)
+- Update Analog-inc/asciidoctor-action action to v1.3.2 ([#636], thanks @renovate)
+- Update dependency ubuntu to v24 ([#643], thanks @renovate)
+- Install mercurial via OS package manager ([#645], thanks @straight-shoota)
+- Support `.exe` file extension in `Makefile` on MSYS2 ([#651], thanks @HertzDevil)
+- Update CI runners ([#654], thanks @straight-shoota)
+- `devenv update` ([#653], thanks @straight-shoota)
+- Add linuguist-vendored annotation for generated files ([#658], thanks @straight-shoota)
+- [CI] Run docs check in separate workflow with path restriction ([#657], thanks @straight-shoota)
+- Add description and metdatada to `shard.yml` ([#662], thanks @straight-shoota)
+
+[#661]: https://github.com/crystal-lang/shards/pull/661
+[#660]: https://github.com/crystal-lang/shards/pull/660
+[#630]: https://github.com/crystal-lang/shards/pull/630
+[#629]: https://github.com/crystal-lang/shards/pull/629
+[#621]: https://github.com/crystal-lang/shards/pull/621
+[#636]: https://github.com/crystal-lang/shards/pull/636
+[#643]: https://github.com/crystal-lang/shards/pull/643
+[#645]: https://github.com/crystal-lang/shards/pull/645
+[#651]: https://github.com/crystal-lang/shards/pull/651
+[#654]: https://github.com/crystal-lang/shards/pull/654
+[#653]: https://github.com/crystal-lang/shards/pull/653
+[#658]: https://github.com/crystal-lang/shards/pull/658
+[#657]: https://github.com/crystal-lang/shards/pull/657
+[#662]: https://github.com/crystal-lang/shards/pull/662
+
+## [0.18.0] (2024-03-28)
+
+[0.18.0]: https://github.com/crystal-lang/shards/releases/0.18.0
+
+### Features
+
+- Support more cache directories on Windows ([#612], thanks @HertzDevil)
+- Detect symlink creation capability on Windows ([#617], thanks @HertzDevil)
+- Use `Colorize.on_tty_only!` ([#620], thanks @HertzDevil)
+
+### Documentation
+
+- Fix typos ([#607], thanks @kojix2)
+
+### Specs
+
+- Use `FileUtils.rm_rf` instead of shell command in spec ([#616], thanks @HertzDevil)
+
+### Infrastructure
+
+- Adjust changelog format to follow that of crystal ([#606], thanks @straight-shoota)
+- Add Windows binary paths to `.gitignore` ([#613], thanks @HertzDevil)
+- Add `.gitattributes` ([#614], thanks @HertzDevil)
+- Add CI job to test against Crystal 1.0 ([#618], thanks @HertzDevil)
+- Configure Renovate ([#564], thanks @renovate)
+- Refactor Makefile phony declaration ([#610], thanks @straight-shoota)
+- Add `make help` recipe ([#609], thanks @straight-shoota)
+- Add `Makefile.win` ([#615], thanks @HertzDevil)
+- Add JSON schema for `shard.yml` ([#623], thanks @nobodywasishere)
+- Fix Makefile incorrect peer target usage ([#608], thanks @straight-shoota)
+
+[#564]: https://github.com/crystal-lang/shards/pull/564
+[#606]: https://github.com/crystal-lang/shards/pull/606
+[#607]: https://github.com/crystal-lang/shards/pull/607
+[#608]: https://github.com/crystal-lang/shards/pull/608
+[#609]: https://github.com/crystal-lang/shards/pull/609
+[#610]: https://github.com/crystal-lang/shards/pull/610
+[#612]: https://github.com/crystal-lang/shards/pull/612
+[#613]: https://github.com/crystal-lang/shards/pull/613
+[#614]: https://github.com/crystal-lang/shards/pull/614
+[#615]: https://github.com/crystal-lang/shards/pull/615
+[#616]: https://github.com/crystal-lang/shards/pull/616
+[#617]: https://github.com/crystal-lang/shards/pull/617
+[#618]: https://github.com/crystal-lang/shards/pull/618
+[#620]: https://github.com/crystal-lang/shards/pull/620
+[#623]: https://github.com/crystal-lang/shards/pull/623
+
 ## [0.17.4] (2023-12-22)
 
 [0.17.4]: https://github.com/crystal-lang/shards/releases/0.17.4

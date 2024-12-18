@@ -3,8 +3,19 @@
 /lib
 /bin/shards
 /bin/shards.dwarf
+/bin/shards.exe
+/bin/shards.pdb
 /spec/.repositories
 /spec/.shards
 /spec/unit/.lib
 /tmp
 /docs/*.html
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
